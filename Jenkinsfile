@@ -1,5 +1,3 @@
-
-
 pipeline {
     agent {
        label "docker_slave_mvn"
