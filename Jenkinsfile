@@ -11,26 +11,7 @@ pipeline {
                    url: 'https://github.com/Sbhalsing0/jenkins-terraform.git'
 
                sh "ls -lat"
-	       sh "ls"
-            }
-        }
-
-        stage("build and test the project") {
-            stages {
-               stage("build") {
-                   steps {
-                       sh "terraform -version"
-                   }
-               }
-               stage("test") {
-                   steps {
-                       withAWS(credentials:'aws_terraform') {
-                       sh "terraform init"
-                       sh "terraform plan"
-                       sh "terraform apply -auto-approve"
-                       }
-                    }
-               }
+	       echo "Testing"
             }
         }
     }
