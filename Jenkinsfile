@@ -11,7 +11,6 @@ pipeline {
                    url: 'https://github.com/Sbhalsing0/jenkins-terraform.git'
 
                sh "ls -lat"
-	       sh "ls"
             }
         }
 
