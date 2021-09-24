@@ -6,15 +6,15 @@ pipeline {
         stage("checkout code") {
             steps {
                echo "Running in docker"
-	           git branch: 'master',
-		           credentialsId: 'jenkins',
-                   url: 'https://github.com/Sbhalsing0/maven-project.git'
-               dir("webapp") {
-                   sh "pwd"
-                }
+	           git branch: 'main',
+		           credentialsId: 'Github_Sanket',
+                   url: 'https://github.com/Sbhalsing0/jenkins-terraform.git'
+
                sh "ls -lat"
+	       sh "ls"
             }
         }
+
         stage("build and test the project") {
             stages {
                stage("build") {
@@ -27,7 +27,7 @@ pipeline {
                        withAWS(credentials:'aws_terraform') {
                        sh "terraform init"
                        sh "terraform plan"
-                       sh "terraform destroy"
+                       sh "terraform apply -auto-approve"
                        }
                     }
                }
