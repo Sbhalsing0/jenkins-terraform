@@ -1,10 +1,11 @@
 pipeline {
-    agent {
-        docker {
-            image 'hashicorp/terraform:latest'
-            label 'LINUX-SLAVE'
-        }
+agent {
+    docker {
+        image 'maven:3.8.1-adoptopenjdk-11'
+        label 'my-defined-label'
+        args  '-v /tmp:/tmp'
     }
+}
     stages {
         stage("checkout code") {
             steps {
@@ -16,7 +17,6 @@ pipeline {
                sh "ls -la"
             }
         }
-
         stage("build and test the project") {
             stages {
                stage("build") {
