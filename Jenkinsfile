@@ -1,6 +1,9 @@
 pipeline {
     agent {
-       label "docker_slave_mvn"
+        docker {
+            image 'hashicorp/terraform:latest'
+            label 'LINUX-SLAVE'
+        }
     }
     stages {
         stage("checkout code") {
