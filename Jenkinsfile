@@ -23,7 +23,7 @@ pipeline {
                }
                stage("test") {
                    steps {
-                       withAWS(credentials:'aws_terraform') {
+                       withAWS(credentials:'AWS_Creds') {
                        sh "terraform init"
                        sh "terraform plan"
                        sh "terraform apply -auto-approve"
