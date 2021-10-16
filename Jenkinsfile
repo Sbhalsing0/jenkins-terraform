@@ -3,8 +3,8 @@ agent {
     docker {
         image 'hashicorp/terraform:latest'
         label 'docker_mvn'
+        }
     }
-}
     stages {
         stage("checkout code") {
             steps {
