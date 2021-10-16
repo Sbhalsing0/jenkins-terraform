@@ -1,9 +1,8 @@
 pipeline {
 agent {
     docker {
-        image 'maven:3.8.1-adoptopenjdk-11'
-        label 'my-defined-label'
-        args  '-v /tmp:/tmp'
+        image 'hashicorp/terraform:latest'
+        label 'docker_mvn'
     }
 }
     stages {
@@ -13,7 +12,6 @@ agent {
 	           git branch: 'main',
 		           credentialsId: 'Github_Sanket',
                    url: 'https://github.com/Sbhalsing0/jenkins-terraform.git'
-
                sh "ls -la"
             }
         }
