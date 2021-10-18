@@ -1,5 +1,7 @@
 pipeline {
-agent any
+    agent {
+       label "docker_terraform"
+    }
     stages {
         stage("checkout code") {
             steps {
