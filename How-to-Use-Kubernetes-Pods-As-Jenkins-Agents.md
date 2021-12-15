@@ -9,7 +9,7 @@ networking:
   apiServerPort: 58350
 ```
 
-# Commands for kind cluster
+# Commands for kind cluster #############
 
 * `kind create cluster --config jenkins-config.yaml`
 * `kubectl cluster-info --context kind-kind`
