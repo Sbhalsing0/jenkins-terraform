@@ -1,5 +1,5 @@
 #!/bin/bash
-#gh auth login --with-token < secret.txt
+gh auth login --with-token < secret.txt
 #cd /home/ubuntu/Documents/
 git clone git@github.com:Sbhalsing0/jenkins-terraform.git
 ls
