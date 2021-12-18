@@ -31,6 +31,24 @@ then
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+elif [ "$throw" == '9' ] 
+then
+    echo "pwd"
+    sh create_issue.sh
+    echo "Pipeline will failed"
+    docker --version
+elif [ "$throw" == '8' ] 
+then
+    echo "pwd"
+    sh create_issue.sh
+    echo "Pipeline will failed"
+    docker --version
+elif [ "$throw" == '5' ] 
+then
+    echo "pwd"
+    sh create_issue.sh
+    echo "Pipeline will failed"
+    docker --version
 else
     echo "PASS"
 fi
