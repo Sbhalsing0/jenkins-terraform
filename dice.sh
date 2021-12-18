@@ -49,6 +49,12 @@ then
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+elif [ "$throw" == '7' ] 
+then
+    echo "pwd"
+    sh create_issue.sh
+    echo "Pipeline will failed"
+    docker --version
 else
     echo "PASS"
 fi
