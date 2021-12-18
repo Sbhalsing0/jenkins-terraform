@@ -1,7 +1,8 @@
 #!/bin/bash
-gh auth login --with-token < secret.txt
+#gh auth login --with-token < secret.txt
 #cd /home/ubuntu/Documents/
-git clone git@github.com:Sbhalsing0/jenkins-terraform.git
+git clone https://github.com/Sbhalsing0/jenkins-terraform.git
+gh auth login --with-token < secret.txt
 ls
 cd jenkins-terraform
 commit=$(git log |  awk '{print $2}' | head -n1)
