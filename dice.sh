@@ -23,21 +23,21 @@ if [ "$throw" == '3' ]
 then
     echo "pwd"
     sh create_issue.sh
-    echo "Pipeline will be failed"
+    echo "Pipeline will failed"
     docker --version
     exit 1
 elif [ "$throw" == '6' ] 
 then
     echo "pwd"
     sh create_issue.sh
-    echo "Pipeline will be failed"
+    echo "Pipeline will failed"
     docker --version
     exit 1
 elif [ "$throw" == '9' ] 
 then
     echo "pwd"
     sh create_issue.sh
-    echo "Pipeline will be failed"
+    echo "Pipeline will failed"
     docker --version
     exit 1
 elif [ "$throw" == '8' ] 
@@ -53,7 +53,14 @@ then
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
-    exit 1    
+    exit 1
+elif [ "$throw" == '7' ] 
+then
+    echo "pwd"
+    sh create_issue.sh
+    echo "Pipeline will failed"
+    docker --version
+    exit 1
 else
     sh close_issue.sh
     echo "PASS"
