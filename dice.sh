@@ -59,3 +59,6 @@ else
     echo "PASS"
     
 
+fi
+
+exit 1
