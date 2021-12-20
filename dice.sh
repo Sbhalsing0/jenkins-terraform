@@ -25,36 +25,42 @@ then
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+    exit 1
 elif [ "$throw" == '6' ] 
 then
     echo "pwd"
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+    exit 1
 elif [ "$throw" == '9' ] 
 then
     echo "pwd"
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+    exit 1
 elif [ "$throw" == '8' ] 
 then
     echo "pwd"
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+    exit 1
 elif [ "$throw" == '5' ] 
 then
     echo "pwd"
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+    exit 1
 elif [ "$throw" == '7' ] 
 then
     echo "pwd"
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+    exit 1
 else
     sh close_issue.sh
     echo "PASS"
