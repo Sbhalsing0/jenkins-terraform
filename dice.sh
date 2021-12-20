@@ -58,6 +58,4 @@ then
 else
     echo "PASS"
     
-fi
 
-exit 0
