@@ -56,8 +56,8 @@ then
     echo "Pipeline will failed"
     docker --version
 else
+    sh close_issue.sh
     echo "PASS"
-    
 
 fi
 
