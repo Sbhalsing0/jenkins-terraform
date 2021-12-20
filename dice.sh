@@ -63,7 +63,7 @@ then
     
 else
     echo "PASS"
-    sh close_issue.sh
+    sh ''' ./close_issue.sh '''
 fi
 
 exit 0
