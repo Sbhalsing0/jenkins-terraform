@@ -55,6 +55,7 @@ then
     sh create_issue.sh
     echo "Pipeline will failed"
     docker --version
+    error
 else
     echo "PASS"
     sh close_issue.sh
