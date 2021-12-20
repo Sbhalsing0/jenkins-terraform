@@ -62,7 +62,6 @@ then
     docker --version
     exit 1
 else
-    sh close_issue.sh
     echo "PASS"
 
 fi
