@@ -19,7 +19,6 @@ pipeline {
 			echo 'working'
                    }
                }
-	    }
                stage("test") {
                    steps {
                        withAWS(credentials:'AWS_Creds') {
