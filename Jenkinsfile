@@ -13,10 +13,13 @@ pipeline {
         stage("build and test the project") {
             stages {
                stage("build") {
-                   steps {
-                       sh "terraform -version"
+                  if (env.BRANCH_NAME == 'master') {
+                      echo 'I only execute on the master branch'
+		  } else {
+			echo 'working'
                    }
                }
+	    }
                stage("test") {
                    steps {
                        withAWS(credentials:'AWS_Creds') {
